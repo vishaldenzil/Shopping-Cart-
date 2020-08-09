@@ -5,8 +5,9 @@ const Item = require('./../Models/item.model');
 
 
 itemRoutes.route('/').get(function(req,res){
-    console.log(req)
+    
     Item.find(function(err,items){
+        console.log(items)
        if(err){
            console.log(err)
        }else {
